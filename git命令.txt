@@ -1,0 +1,66 @@
+配置用户信息
+git config --global user.name "xxx"
+git config --global user.email  xxxxx@d.com
+
+查看一个命令xx的用法
+git help xx
+
+如何从一个项目中建立git版本控制
+在目录下
+mkdir  text
+cd text
+git init  //初始化
+接着在text文件夹下可以新建代码文件了
+
+跟踪文件
+git add 代码文件    （例如：git add  a.html   和 git add *.html     //   git add  text/\*.js等）
+
+提交文件
+git commit
+
+查看提交
+git log
+
+查看项目当前状态
+git status
+
+创建分支
+git branch xx
+
+查看当前分支数
+git branch
+
+切换分支
+git checkout xx
+
+
+分支的合并和冲突
+
+创建一个新分支同时切换到创建的分支去：git checkout -b xxx
+
+
+合并分支：git merge xxx
+
+
+合并完后就可以删除被合并的分支：git branch -d xxx
+
+
+如果在当前working分支上工作到一半的时候，需要切换到另外的分支上去工作怎么办
+a，在当前分支下执行：git stash    保存工作到一半的工作状态
+b，切换到别的分支：git checkout xxx  工作完保存后
+c，再切换回working：git checkout working
+d，需要切换到为完成的工作状态，首先执行：git stash list   查看保存的列表，列表有个头名称，如：stash@{0}
+e，再执行：git stash apply stash@{0}    这样就切换到未完成的工作状态中了
+
+
+
+
+
+
+
+
+
+
+
+
+
